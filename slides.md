@@ -1,32 +1,55 @@
-% Reveal Presentation Template
+% Presentation Template
 % Sable Cantus
 % <date>
 
-#
-Fork this repo
-[GIT URL](https://github.com/sc137/reveal_pres_template.git)
 
-#
+--- 
+
 Update the slides.md file
 
-#
-* add bullets
-* titles
-* images
+---
 
-#
-Compile to a self-contained file
+> * add bullets
+> * titles
+> * images
 
-    ./build.sh
+---
+
+Press "s" to enable speaker notes.
+
+::: notes
+
+These are speaker notes. Use them!
+
+:::
+
+---
+
+<section data-background-color="rgb(70, 70, 255)">
+  <p>Change the backgrounds, too!</p>
+</section>
+
+---
+
+Compile to a self-contained file:
+
+    $ ./build.sh
     
-#
-    pandoc -t revealjs \
-    --variable theme="black" \
-    -s slides.md \
-    -o index.html
+---
 
-#
+The build file is very simple:
+
+    pandoc -t revealjs \
+        --variable theme="black" \
+        -s slides.md \
+        -o index.html
+
+
+---
+
 Enable git pages FTW
 
-#
-![](img/cat.jpg)
+---
+
+<section data-background-image="img/cat.jpg">
+</section>
