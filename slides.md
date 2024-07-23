@@ -9,6 +9,8 @@ Update the slides.md file
 
 ---
 
+Press the right arrow to build this slide.
+
 > * add bullets
 > * titles
 > * images
@@ -44,6 +46,16 @@ The build file is very simple:
         -s slides.md \
         -o index.html
 
+
+---
+
+Some theme options include:
+
+* white
+* league
+* beige
+* night
+...
 
 ---
 

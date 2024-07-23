@@ -3,9 +3,16 @@
 # pandoc build command for the slide show
 # https://pandoc.org/MANUAL.html#slide-shows
 
-pandoc -t revealjs \
---variable theme="black" \
--s slides.md \
--o index.html
+if command -v pandoc >/dev/null 2>&1; then
 
-open index.html
+    pandoc -t revealjs \
+    --variable theme="black" \
+    -s slides.md \
+    -o index.html
+
+    echo "Opening index.html"
+    open index.html
+else
+    echo "Pandoc is not installed."
+    echo "try: brew install pandoc"
+fi
